@@ -1,4 +1,4 @@
-const { User, Illness } = require('../models')
+const { User } = require('../models')
 
 // Find All Users
 const getUsers = async (req, res) => {
@@ -86,7 +86,7 @@ const createUser = async (req, res) => {
 // Update a User
 const updateUserById = async (req, res) => {
       try {
-            const { firstName, lastName, email, password, username,birthDate, sex, illnessId } = req.body
+            const { firstName, lastName, email, password, username, birthDate, sex, illnessId } = req.body
             const userId = req.params.id
             console.log(userId)
             const user = await User.findById(userId)

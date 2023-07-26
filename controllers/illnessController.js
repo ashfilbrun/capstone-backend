@@ -1,4 +1,4 @@
-const { Illness, Symptoms } = require('../models')
+const { Illness, Symptom } = require('../models')
 
 //GET ALL ILLNESS 
 const getIllness = async (req, res) => {
@@ -20,9 +20,9 @@ const getIllnessByName = async (req, res) => {
   try {
       const name = req.params.name
       const regex = new RegExp(name, 'i')
-      const illness = await symptoms.find({ name: regex}).populate('name').populate('description').populate('symptoms')
-      if (!team) throw Error('Illness not found.')
-      res.status(200).json(team)
+      const illness = await Illness.find({ name: regex}).populate('name').populate('description').populate('symptom')
+      if (!illness) throw Error('Illness not found.')
+      res.status(200).json(illness)
   } catch (e) {
       res.status(400).send(e.message)
   }
@@ -67,7 +67,7 @@ const updateIllnessById = async (req, res) => {
 const getSymptomById = async (req, res) => {
   try {
     const { id } = req.params
-    const findIllnessSymptomId = await Illness.findById(id)
+    const findIllnessSymptomId = await Symptom.findById(id)
     if(!findIllnessSymptomId) throw Error(`Symptom not found`)
     res.json(findIllnessSymptomId)
   }catch (e){
@@ -78,7 +78,7 @@ const getSymptomById = async (req, res) => {
 
 const updateSymptomById = async (req, res) => {
   try {
-    const updateSymptom = await Symptoms.findByIdAndUpdate(req.query.symptomId, {[req.query.whatToUpdate]: req.query.update})
+    const updateSymptom = await Symptom.findByIdAndUpdate(req.query.symptomId, {[req.query.whatToUpdate]: req.query.update})
     if(!updateSymptom) throw Error(`Symptom not updated`)
     res.json(updateSymptom)  
   }catch (e){
@@ -90,7 +90,7 @@ const updateSymptomById = async (req, res) => {
 const deleteSymptomById = async (req, res) => {
   try {
     const { id } = req.params
-    const deleteSymptom = await Illness.findByIdAndDelete(id)
+    const deleteSymptom = await Symptom.findByIdAndDelete(id)
     if(!deleteSymptom) throw Error(`Symptom not deleted`)
     res.json(deleteSymptom)
   }catch (e){
@@ -105,7 +105,7 @@ const findSymptomsByIllness = async (req, res) => {
   try {
         console.log(req.params)
         const { illness } = req.params.illness
-        const symptoms = await Illness.find(illness)
+        const symptoms = await Symptom.find(illness)
         if (!symptoms) {
               return res.status(404).json({ message: 'Symptoms not found'})
         }

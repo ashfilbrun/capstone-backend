@@ -9,23 +9,31 @@ const main = async () => {
       firstName: 'Abigail',
       lastName: 'Smith',
       email: 'abbismith123@mail.com',
-      password: 'abc123',
+      password: 'abc123456',
       username: 'abigailsmith',
       birthDate: new Date (`2001-05-23`),
       sex: 'female',
-      userSymptoms: ['googly eyes', 'bloated head'],
       googleId: '0'
     },
     {
       firstName: 'Jeremiah',
       lastName: 'Kinsler',
       email: 'jkinsler@mail.com',
-      password: 'xyz123',
+      password: 'xyz123456',
       username: 'jkins',
       birthDate: new Date (`1993-10-05`),
       sex: 'male',
-      userSymptoms: ['broken heart'],
       googleId: '1'
     }
   ]
+
+  await User.insertMany(users)
+  console.log('Created users!')
 }
+
+const run = async () => {
+  await main()
+  db.close()
+}
+
+run()

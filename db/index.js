@@ -1,7 +1,11 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
+const URL = process.env.DATABASE_URL
+
+console.log(URL)
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/illnessDatabase')
+  .connect(URL)
   .then(() => {
     console.log('Successfullt connected to MongoDB.')
   })

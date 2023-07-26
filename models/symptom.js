@@ -1,22 +1,21 @@
 const { Schema } = require('mongoose')
 
-const symptomsSchema = new Schema(
+const symptomSchema = new Schema(
   {
     name: { 
       type: String,
       required: true 
     },
     score: { 
-      type: Number, 
-      required: true 
+      type: Number,
     },
-    illnessId: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Illness'
-      }
-    ]
+    // illnessId: [
+    //   {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Illness'
+    //   }
+    // ]
   }
 )
 
-module.exports = symptomsSchema
+module.exports = symptomSchema

@@ -40,9 +40,6 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Illness'
     },
-    userSymptoms: {
-      type: String
-    },
     googleId: {
       type: String,
       unique: true,
