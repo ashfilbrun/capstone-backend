@@ -87,7 +87,7 @@ const updateSymptomById = async (req, res) => {
   }
 }
 
-const deleteSymptomById = async (res, res) => {
+const deleteSymptomById = async (req, res) => {
   try {
     const { id } = req.params
     const deleteSymptom = await Illness.findByIdAndDelete(id)
@@ -101,7 +101,7 @@ const deleteSymptomById = async (res, res) => {
 
 
 // FIND SYMPTOMS BY ILLNESS
-const findSymptomsByIllness = async (res, req) => {
+const findSymptomsByIllness = async (req, res) => {
   try {
         console.log(req.params)
         const { illness } = req.params.illness

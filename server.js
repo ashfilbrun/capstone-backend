@@ -3,6 +3,7 @@ const PORT = process.env.PORT || 3001
 const db = require('./db/index')
 const AppRouter = require('./routes/appRouter')
 const cors = require('cors')
+const express = require('express')
 const app = express()
 console.log(process.env.DATABASE_URL)
 
