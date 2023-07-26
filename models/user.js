@@ -10,9 +10,26 @@ const userSchema = new Schema(
       type: String, 
       required: true 
     },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      maxlength: 50
+    },
+    password: {
+      type: String,
+      required: true,
+      minlength: 8,
+    },
+    username: {
+      type: String,
+      required: true,
+      unique: true,
+      minlength: 3,
+      maxlength: 20
+    },
     birthDate: { 
       type: Date, 
-      required: true, 
       trim: true 
     },
     sex: { 
@@ -23,6 +40,13 @@ const userSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Illness'
     },
+    userSymptoms: {
+      type: String
+    },
+    googleId: {
+      type: String,
+      unique: true,
+    }
   },
   { timestamps: true }
 )

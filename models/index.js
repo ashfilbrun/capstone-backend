@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const userSchema = require('./user')
-const symptomsSchema = require('./symptoms')
+const symptomsSchema = require('./symptom')
 const illnessSchema = require('./illness')
 
 const User = mongoose.model('User', userSchema)

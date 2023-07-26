@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 
 const illnessSchema = new Schema(
   {
-    illnessName: {
+    name: {
       type: String,
       required: true,
       unique: true,
@@ -13,6 +13,13 @@ const illnessSchema = new Schema(
       type: String,
       maxlength: 250
     },
-    
+    symptoms: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Symptoms'
+      }
+    ]
   }
 )
+
+module.exports = illnessSchema

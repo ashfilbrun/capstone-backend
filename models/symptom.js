@@ -2,7 +2,7 @@ const { Schema } = require('mongoose')
 
 const symptomsSchema = new Schema(
   {
-    symptomName: { 
+    name: { 
       type: String,
       required: true 
     },
@@ -15,8 +15,7 @@ const symptomsSchema = new Schema(
         type: Schema.Types.ObjectId,
         ref: 'Illness'
       }
-    ],
-
+    ]
   }
 )
 
