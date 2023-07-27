@@ -11,7 +11,6 @@ Router.get('/name/:name', controller.findUserByName)
 
 Router.get('/email/:email', controller.findUserByEmail)
 
-
 Router.delete('/:id', controller.deleteUserById)
 
 Router.put('/:id', controller.updateUserById)
