@@ -2,7 +2,7 @@ const { Illness, Symptom } = require('../models')
 
 //GET ALL ILLNESS 
 const getIllness = async (req, res) => {
-  const findIllness = await Illness.find({}).populate('illnessName', 'description', 'symptoms' )
+  const findIllness = await Illness.find({}).populate('symptoms')
   return res.json(findIllness)
 }
 // GET ALL ILLNESSES

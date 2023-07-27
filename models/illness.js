@@ -15,7 +15,7 @@ const illnessSchema = new Schema(
     symptoms: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Symptoms'
+        ref: 'Symptom'
       }
     ]
   }

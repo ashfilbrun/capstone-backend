@@ -12,7 +12,7 @@ const createSymptom = async (req, res) => {
 
 // FIND ALL SYMPTOMS
 const getSymptoms = async (req, res) => {
-  const allSymptoms = await Symptom.find({}).populate(`name`)
+  const allSymptoms = await Symptom.find({})
   res.status(200).json(allSymptoms)
 }
 
@@ -20,7 +20,7 @@ const getSymptoms = async (req, res) => {
 const getSymptomById = async (req, res) => {
   try {
     const { id } = req.params
-    const symptomById = await Symptoms.findById(id)
+    const symptomById = await Symptom.findById(id)
     if(!symptomById) throw Error(`Symptom not found`)
     res.json(symptomById)
   }catch (e){
