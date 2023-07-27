@@ -5,7 +5,7 @@ const illnessRouter = require('./illnessRouter')
 const symptomRouter = require('./symptomRouter')
 const userRouter = require('./userRouter')
 
-app.get('/', (req, res) => {
+Router.get('/', (req, res) => {
   res.send('root2!')
 })
 
