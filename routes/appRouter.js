@@ -5,9 +5,9 @@ const illnessRouter = require('./illnessRouter')
 const symptomRouter = require('./symptomRouter')
 const userRouter = require('./userRouter')
 
-Router.use('./illness', illnessRouter)
-Router.use('./symptoms', symptomRouter)
-Router.use('./user', userRouter)
+Router.use('/illness', illnessRouter)
+Router.use('/symptoms', symptomRouter)
+Router.use('/user', userRouter)
 
 Router.get('/auth/google', passport.authenticate(
   'google',
