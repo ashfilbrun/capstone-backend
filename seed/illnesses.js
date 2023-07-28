@@ -14,7 +14,7 @@ const main = async () => {
       name: 'Hashimotos',
       description: 'An auto-immune disease where the immune system mistakes the thyroid for as foreign and attacks it',
       symptoms: ['64c164bef1856be9a1a40bcf']
-    }
+    },
   ]
   await Illness.insertMany(illnesses)
   console.log(`Created illnesses!`)
