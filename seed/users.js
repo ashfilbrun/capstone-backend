@@ -12,8 +12,9 @@ const main = async () => {
       password: 'abc123456',
       username: 'abigailsmith',
       birthDate: new Date (`2001-05-23`),
+      illnessId: null,
       sex: 'female',
-      googleId: '0'
+      googleId: ''
     },
     {
       firstName: 'Jeremiah',
@@ -22,8 +23,9 @@ const main = async () => {
       password: 'xyz123456',
       username: 'jkins',
       birthDate: new Date (`1993-10-05`),
+      illnessId: null,
       sex: 'male',
-      googleId: '1'
+      googleId: ''
     }
   ]
 
