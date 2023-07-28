@@ -6,15 +6,10 @@ const symptomSchema = new Schema(
       type: String,
       required: true 
     },
-    score: { 
+    score: {
       type: Number,
-    },
-    // illnessId: [
-    //   {
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Illness'
-    //   }
-    // ]
+      required: true
+    }
   }
 )
 
