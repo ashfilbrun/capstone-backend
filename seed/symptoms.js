@@ -7,109 +7,109 @@ const main = async () => {
   const symptoms = [
     {
       name: 'brain fog',
-      score: '',
-      // illnessId: ''
+      score: null,
+      // illnessId: null,
     },
     {
       name: 'fatigue',
-      score: '',
-      // illnessId: ''
+      score: null,
+      // illnessId: null,
     },
     {
       name: 'joint pain',
-      score: '',
+      score: null,
     },
     {
       name: 'fever',
-      score: '',
+      score: null,
     },
     {
       name: 'muscle soreness',
-      score: '',
+      score: null,
     },
     {
       name: 'sunlight sensitivity',
-      score: '',
+      score: null,
     },
     {
       name: 'muscle weakness',
-      score: '',
+      score: null,
     },
     {
       name: 'headache',
-      score: '',
+      score: null,
     },
     {
       name: 'hot flashes',
-      score: '',
+      score: null,
     },
     {
       name: 'dry mouth',
-      score: '',
+      score: null,
     },
     {
       name: 'increased appetite',
-      score: '',
+      score: null,
     },
     {
       name: 'loss of appetite',
-      score: '',
+      score: null,
     },
     {
       name: 'hip pain',
-      score: '',
+      score: null,
     },
     {
       name: 'joint swelling',
-      score: '',
+      score: null,
     },
     {
       name: 'cold intolerance',
-      score: '',
+      score: null,
     },
     {
       name: 'heat intolerance',
-      score: '',
+      score: null,
     },
     {
       name: 'memory issues',
-      score: '',
+      score: null,
     },
     {
       name: 'malar rash',
-      score: '',
+      score: null,
     },
     {
       name: 'non-specific rash',
-      score: '',
+      score: null,
     },
     {
       name: 'chronic uticaria (hives)',
-      score: '',
+      score: null,
     },
     {
       name: 'unexplained weight gain',
-      score: '',
+      score: null,
     },
     {
       name: 'unexplained weight loss',
-      score: '',
+      score: null,
     },
     {
       name: 'leg swelling',
-      score: '',
+      score: null,
     },
     {
       name: 'facial swelling',
-      score: '',
+      score: null,
     },
     {
       name: 'joint stiffness',
-      score: '',
+      score: null,
     },
     {
       name: 'hair loss',
-      score: '',
+      score: null,
     }
   ]
 
