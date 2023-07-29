@@ -16,6 +16,7 @@ const main = async () => {
       symptomId: ['64c174d8dcba0a9986a16659', '64c174d8dcba0a9986a16664', '64c174d8dcba0a9986a1665b']
     },
   ]
+  await Survey.deleteMany()
   await Survey.insertMany(surveys)
   console.log(`Created surveys!`)
 }

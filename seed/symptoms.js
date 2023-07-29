@@ -113,6 +113,7 @@ const main = async () => {
     }
   ]
 
+  await Symptom.deleteMany()
   await Symptom.insertMany(symptoms)
   console.log('Created symptoms!')
 }

@@ -16,6 +16,8 @@ const main = async () => {
       symptoms: ['64c164bef1856be9a1a40bcf']
     },
   ]
+
+  await Illness.deleteMany()
   await Illness.insertMany(illnesses)
   console.log(`Created illnesses!`)
 }
