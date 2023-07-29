@@ -34,8 +34,8 @@ const getSymptomByName = async (req, res) => {
   try {
     const name = req.params.name
     const symptom = await Symptom.find({ name: name })
-    if (!user) throw Error(`User not found`)
-    res.status(200).json(user)
+    if (!user) throw Error(`Symptom not found`)
+    res.status(200).json(symptom)
   } catch (e) {
     console.log(e)
     res.status(500).send(`Symptom not found`)

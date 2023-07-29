@@ -8,7 +8,6 @@ const symptomSchema = new Schema(
     },
     score: {
       type: Number,
-      required: true
     }
   }
 )

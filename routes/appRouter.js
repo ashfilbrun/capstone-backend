@@ -6,15 +6,15 @@ const symptomRouter = require('./symptomRouter')
 const userRouter = require('./userRouter')
 const surveyRouter = require('./surveyRouter')
 
+Router.get('/', (req, res) => {
+  res.send('root2!')
+})
 
 Router.use('/illness', illnessRouter)
 Router.use('/symptom', symptomRouter)
 Router.use('/user', userRouter)
 Router.use('/survey', surveyRouter)
 
-Router.get('/', (req, res) => {
-  res.send('root2!')
-})
 // Router.get('/auth/google', passport.authenticate(
 //   'google',
 //   {

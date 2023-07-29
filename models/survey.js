@@ -8,8 +8,8 @@ const surveySchema = new Schema(
       unique: true,
     },
     userId: {
-      type: String,
-      maxlength: 250
+      type: Schema.Types.ObjectId,
+      ref: 'User'
     },
     symptomId: [
       {
