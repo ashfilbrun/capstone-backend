@@ -1,6 +1,8 @@
 const Router = require('express').Router()
 const controller = require('../controllers/surveyController')
 
+Router.get('/', controller.getSurveys)
+
 Router.post('/create', controller.createSurvey)
 
 Router.get('/:id', controller.getSurveyById)

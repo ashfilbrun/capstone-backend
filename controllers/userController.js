@@ -25,16 +25,16 @@ const findUserById = async (req, res) => {
       }
 }
 
-// Find User By Name 
-const findUserByName = async (req, res) => {
+// Find User By Username 
+const findUserByUsername = async (req, res) => {
       try {
-            const name = req.params.name
-            const user = await User.find({ name: name })
-            if (!user) throw Error('User not found')
+            const username = req.params.username
+            const user = await User.find({ username: username })
+            if (!user) throw Error('Username not found')
             res.status(200).json(user)
       } catch (e) {
             console.log(e)
-            res.status(500).send('User not found')
+            res.status(500).send('Username not found')
       }
 }
 
@@ -139,7 +139,7 @@ module.exports = {
       createUser, 
       getUsers, 
       findUserById, 
-      findUserByName,
+      findUserByUsername,
       findUserByEmail,
       deleteUserById, 
       updateUserById,

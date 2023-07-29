@@ -7,7 +7,7 @@ Router.get('/', controller.getUsers)
 
 Router.get('/:id', controller.findUserById)
 
-Router.get('/name/:name', controller.findUserByName)
+Router.get('/username/:username', controller.findUserByUsername)
 
 Router.get('/email/:email', controller.findUserByEmail)
 

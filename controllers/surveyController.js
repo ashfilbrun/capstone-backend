@@ -11,6 +11,19 @@ const createSurvey = async (req, res) => {
   res.json(newSurvey)
 }
 
+//GET ALL Survey
+const getSurveys = async (req, res) => {
+  try {
+        const allSurveys = await Survey.find()
+        if(!allSurveys) throw Error ('Survey not found')
+        res.status(200).json(allSurveys)
+  } catch (e) {
+        console.log(e)
+        res.status(500).send('Survey not found')
+  }
+}
+
+
 //GET Survey By Id 
 const getSurveyById = async (req, res) => {
   try {
@@ -92,6 +105,7 @@ const findSymptomsBySurvey = async (req, res) => {
 //EXPORT 
 module.exports = {
   createSurvey,
+  getSurveys,
   getSurveyById,
   updateSurveyById,
   getSymptomById,
