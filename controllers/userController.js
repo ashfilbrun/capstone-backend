@@ -3,7 +3,8 @@ const { User } = require('../models')
 // Find All Users
 const getUsers = async (req, res) => {
       try {
-            const users = await User.find().populate('illness')
+            const users = await User.find()
+            // .populate('illness')
             if(!users) throw Error ('User not found')
             res.status(200).json(users)
       } catch (e) {
