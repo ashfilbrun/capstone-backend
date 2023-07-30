@@ -16,6 +16,9 @@ const surveySchema = new Schema(
         ref: 'Symptom'
       }
     ]
+    // totalScore: {
+    //   type: Number
+    // }
   }
 )
 

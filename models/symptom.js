@@ -5,9 +5,6 @@ const symptomSchema = new Schema(
     name: { 
       type: String,
       required: true 
-    },
-    score: {
-      type: Number,
     }
   }
 )
