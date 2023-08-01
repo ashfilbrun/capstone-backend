@@ -33,12 +33,13 @@ const userSchema = new Schema(
       trim: true 
     },
     sex: { 
-      type: String, 
-      required: true 
+      type: String,
     },
     illnessId: { 
       type: Schema.Types.ObjectId,
-      ref: 'Illness'
+      ref: 'Illness',
+      minlength: 4,
+      maxlength: 45
     },
     googleId: {
       type: String,
