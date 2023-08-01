@@ -14,7 +14,7 @@ const main = async () => {
       birthDate: new Date (`2001-05-23`),
       illnessId: null,
       sex: 'female',
-      googleId: '1'
+      // googleId: '1'
     },
     {
       firstName: 'Jeremiah',
@@ -25,7 +25,7 @@ const main = async () => {
       birthDate: new Date (`1993-10-05`),
       illnessId: null,
       sex: 'male',
-      googleId: '2'
+      // googleId: '2'
     }
   ]
 

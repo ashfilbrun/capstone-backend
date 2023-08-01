@@ -87,7 +87,7 @@ const createUser = async (req, res) => {
 // Update a User
 const updateUserById = async (req, res) => {
       try {
-            const { firstName, lastName, email, password, username, birthDate, sex, illnessId } = req.body
+            const { firstName, lastName, email, password, username, birthDate, sex, illness } = req.body
             const userId = req.params.id
             console.log(userId)
             const user = await User.findById(userId)
@@ -103,7 +103,7 @@ const updateUserById = async (req, res) => {
             user.username = username || user.username
             user.birthDate = birthDate || user.birthDate
             user.sex = sex || user.sex
-            user.illnessId = illnessId || user.illnessId
+            user.illnessId = illness || user.illnessId
             
             const updatedUser = await user.save()
             res.status(200).json({ message: 'User updated successfully', user: updatedUser })

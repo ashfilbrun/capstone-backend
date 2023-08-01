@@ -7,6 +7,8 @@ Router.post('/create', controller.createSurvey)
 
 Router.get('/:id', controller.getSurveyById)
 
+Router.get('/userSurvey/:userId', controller.getSurveysByUser)
+
 Router.get('/:id/:symptoms', controller.getSymptomById)
 
 Router.put('/:id', controller.updateSurveyById)

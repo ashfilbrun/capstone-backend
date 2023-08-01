@@ -38,13 +38,10 @@ const userSchema = new Schema(
     illnessId: { 
       type: Schema.Types.ObjectId,
       ref: 'Illness',
-      minlength: 4,
-      maxlength: 45
-    },
-    googleId: {
-      type: String,
-      unique: true,
-    },
+    }
+    // googleId: {
+    //   type: String,
+    // },
     // days: {
     //   type: 
     // }

@@ -6,7 +6,8 @@ const illnessSchema = new Schema(
       type: String,
       required: true,
       unique: true,
-      maxlength: 50
+      maxlength: 60,
+      minlength: 4
     },
     description: {
       type: String,
