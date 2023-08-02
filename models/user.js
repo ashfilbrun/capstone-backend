@@ -1,20 +1,20 @@
-const { Schema } = require('mongoose')
+const { Schema } = require("mongoose");
 
 const userSchema = new Schema(
   {
-    firstName: { 
-      type: String, 
-      required: true 
+    firstName: {
+      type: String,
+      required: true,
     },
-    lastName: { 
-      type: String, 
-      required: true 
+    lastName: {
+      type: String,
+      required: true,
     },
     email: {
       type: String,
       required: true,
       unique: true,
-      maxlength: 50
+      maxlength: 50,
     },
     password: {
       type: String,
@@ -26,27 +26,21 @@ const userSchema = new Schema(
       required: true,
       unique: true,
       minlength: 3,
-      maxlength: 20
+      maxlength: 20,
     },
-    birthDate: { 
-      type: Date, 
-      trim: true 
+    birthDate: {
+      type: Date,
+      trim: true,
     },
-    sex: { 
+    sex: {
       type: String,
     },
-    illnessId: { 
+    illnessId: {
       type: Schema.Types.ObjectId,
-      ref: 'Illness',
-    }
-    // googleId: {
-    //   type: String,
-    // },
-    // days: {
-    //   type: 
-    // }
+      ref: "Illness",
+    },
   },
   { timestamps: true }
-)
+);
 
-module.exports = userSchema
+module.exports = userSchema;
